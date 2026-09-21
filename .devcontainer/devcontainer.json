@@ -9,6 +9,13 @@
 		"type=bind,source=${localEnv:HOME}/.ssh,target=/root/.ssh,readonly" // Mount SSH folder
 	],
 
-	"remoteUser": "root" // SSH key sharing assumes root
+	"remoteUser": "root",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"Dart-Code.flutter"
+			]
+		}
+	} // SSH key sharing assumes root
 }
 
