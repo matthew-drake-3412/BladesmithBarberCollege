@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'upload_page.dart';
 
 class StartPage extends StatelessWidget {
   const StartPage({super.key});
@@ -9,7 +10,12 @@ class StartPage extends StatelessWidget {
       appBar: AppBar(title: const Text('Start')),
       body: Center(
         child: ElevatedButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => UploadPage()),
+            );
+          },
           child: const Text('Upload a photo'),
         ),
       ),
