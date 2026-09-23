@@ -1,5 +1,8 @@
 import 'pages/start_page.dart';
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
+
+import 'widgets/image_selector_widget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,7 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Gradients AI',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -110,6 +113,7 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
+            ImageSelectorWidget(onPhotosSelected: (List<XFile> photos) { print("Selected ${photos.length} photos"); }),
           ],
         ),
       ),
